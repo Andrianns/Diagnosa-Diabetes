@@ -18,8 +18,3 @@ commands = [
     "/opt/venv/bin/pip3 install --upgrade pip setuptools",
     "/opt/venv/bin/pip3 install flask pandas==1.3.3"
 ]
-
-[phases.start]
-commands = [
-    "python3 app.py"
-]
