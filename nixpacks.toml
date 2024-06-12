@@ -5,9 +5,8 @@ packages = ["python39", "gcc"]
 commands = [
     "python3 -m venv /opt/venv",
     ". /opt/venv/bin/activate",
-    "/opt/venv/bin/pip install flask pandas",
+    "/opt/venv/bin/pip install flask",
     "/opt/venv/bin/pip install pandas",
-    "/opt/venv/bin/pip install -r requirements.txt"
 ]
 
 [phases.install]
