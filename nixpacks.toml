@@ -8,7 +8,6 @@ commands = [
     "/opt/venv/bin/pip install --upgrade pip setuptools",
     "/opt/venv/bin/pip install flask",
     "/opt/venv/bin/pip install pandas==1.3.3",
-    "/opt/venv/bin/pip install -r requirements.txt"
 ]
 
 [phases.install]
