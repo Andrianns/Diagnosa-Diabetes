@@ -1,13 +1,25 @@
-[phases.build]
+[build]
 packages = ["python39", "gcc"]
+
+[phases.setup]
 commands = [
     "python3 -m venv /opt/venv",
-    ". /opt/venv/bin/activate",
-    "/opt/venv/bin/pip3 install --upgrade pip setuptools",
-    "/opt/venv/bin/pip3 install flask pandas==1.3.3",
-d]
+    ". /opt/venv/bin/activate"
+]
 
 [phases.install]
 commands = [
-    "/opt/venv/bin/pip3 install -r requirements.txt"
+    "/opt/venv/bin/pip install --upgrade pip setuptools",
+    "/opt/venv/bin/pip install -r requirements.txt"
+]
+
+[phases.build]
+commands = [
+    "/opt/venv/bin/pip3 install --upgrade pip setuptools",
+    "/opt/venv/bin/pip3 install flask pandas==1.3.3"
+]
+
+[phases.start]
+commands = [
+    "python3 app.py"
 ]
