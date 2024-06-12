@@ -236,4 +236,4 @@ def Evaluate(K,k,items, iterations):
 	return accuracy,yhasil
 
 if __name__ == '__main__':
-	app.run(debug=True, port=port)
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
