@@ -1,16 +1,12 @@
 [build]
 packages = ["python39", "gcc"]
 
-[phases.setup]
+[phases.install]
 commands = [
     "python3 -m venv /opt/venv",
     ". /opt/venv/bin/activate",
     "/opt/venv/bin/pip install flask",
     "/opt/venv/bin/pip install pandas",
-]
-
-[phases.install]
-commands = [
     "/opt/venv/bin/pip install -r requirements.txt"
 ]
 
